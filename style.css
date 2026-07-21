@@ -1,0 +1,206 @@
+body {
+  background-color: aqua;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.section1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.main_div {
+  background-color: #121212;
+  padding: 20px;
+  border-radius: 15px;
+  height: 70%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.div1 {
+  position: relative;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.div1 > h1 {
+  font-size: 50px;
+  font-weight: 900;
+  color: #aaa;
+}
+
+.form1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin-bottom: 40px;
+}
+
+.form1 > input {
+  padding: 20px;
+  border-radius: 10px;
+  background: transparent;
+  font-size: 35px;
+  border: none;
+  color: white;
+  margin-bottom: 20px;
+  position: relative;
+  left: 30px;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+input:focus {
+  outline: none;
+}
+
+.div2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.div2 button {
+  border-radius: 50px;
+  font-size: 20px;
+}
+
+.div2 button:nth-child(4n) {
+  background-color: aqua;
+}
+
+.div2 button:first-child {
+  background-color: aqua;
+}
+
+.div2 button:nth-child(2) {
+  background-color: aqua;
+}
+
+.div2 button:nth-child(3) {
+  background-color: aqua;
+}
+
+.div2 button:nth-child(20) {
+  background-color: gold;
+}
+
+.token {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+
+.div_token {
+  display: none;
+}
+
+.div_token.active {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.div_token > h2 {
+  font-size: 20px;
+  font-weight: 900;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.div_token button {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: blue;
+  font-size: 15px;
+  border: none;
+  color: white;
+}
+
+.div_token button:hover {
+  cursor: pointer;
+}
+
+.div_token button:active {
+  transform: scale(0.9);
+}
+
+.div_vip {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: black;
+  width: fit-content;
+  border-radius: 10px;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  border-bottom: 15px solid gold;
+  cursor: pointer;
+}
+
+.div_vip > img {
+  width: 20px;
+  height: 20px;
+}
+
+.div_vip > h3 {
+  font-size: 13px;
+  font-weight: 900;
+  color: gold;
+}
+
+.div_add {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: black;
+  width: fit-content;
+  border-radius: 10px;
+  position: absolute;
+  top: 120px;
+  left: 10px;
+  border-bottom: 15px solid lab(46.46% 23.2 -54.92);
+  cursor: pointer;
+}
+
+.div_add > img {
+  width: 20px;
+  height: 20px;
+}
+
+.div_add > h3 {
+  font-size: 13px;
+  font-weight: 900;
+  color: lab(46.46% 23.2 -54.92);
+}
