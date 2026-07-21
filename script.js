@@ -27,11 +27,12 @@ function hasil() {
   token--;
   sisa_token.textContent = "Token: " + token;
 
-  if (token == 0 || token < 0) {
+  if (token < 0) {
     pop_token1.classList.add("active");
-    sisa_token.textContent = "Token Habis!";
     input1.value = "Isi Token Dulu Yaa☺️";
-    return;
+  }
+  if (token < 1) {
+    sisa_token.textContent = "Token Habis!";
   }
 }
 
