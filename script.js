@@ -39,3 +39,18 @@ function hasil() {
 buton1.addEventListener("click", () => {
   pop_token1.classList.remove("active");
 });
+
+let refill = document.querySelector(".div_add");
+let iklan1 = document.querySelector(".div_iklan");
+let video1 = document.getElementById("video1");
+
+refill.addEventListener("click", () => {
+  iklan1.classList.add("active2");
+  video1.play();
+  token += 5;
+  sisa_token.textContent = "Token: " + token;
+  setTimeout(() => {
+    iklan1.classList.remove("active2");
+    video1.pause();
+  }, 12400);
+});
