@@ -36,6 +36,15 @@ function hasil() {
     console.log("error");
     input1.value = "Error!";
   }
+
+  while (
+    input1.value == "Isi Token Dulu Yaa☺️" ||
+    input1.value == "Error!" ||
+    input1.value == "undefined"
+  ) {
+    return;
+  }
+
   token--;
   sisa_token.textContent = "Token: " + token;
 
@@ -82,4 +91,16 @@ buttonYes.addEventListener("click", () => {
 
 buttonNo.addEventListener("click", () => {
   pop_choice.classList.remove("active3");
+});
+
+let reg_vip = document.querySelector(".div_vip");
+let ttp = document.getElementById("ttp");
+let pop_reg = document.querySelector(".wadah_vip1");
+
+reg_vip.addEventListener("click", () => {
+  pop_reg.classList.add("active4");
+});
+
+ttp.addEventListener("click", () => {
+  pop_reg.classList.remove("active4");
 });
