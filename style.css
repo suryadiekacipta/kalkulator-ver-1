@@ -141,17 +141,77 @@ input:focus {
 .div_token > h2 {
   font-size: 20px;
   font-weight: 900;
-  color: #aaa;
+  color: gold;
   margin-bottom: 20px;
 }
 
-.div_token button {
-  padding: 20px;
-  border-radius: 20px;
-  background-color: blue;
+.div_token p {
+  color: white;
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.div_token span {
+  display: flex;
+  gap: 10px;
+}
+
+.div_token #button1 {
+  padding: 10px 15px 10px;
+  border-radius: 5px;
+  background-color: #302e2e;
   font-size: 15px;
   border: none;
+  font-weight: bold;
   color: white;
+}
+
+.div_token h6 {
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  top: 12px;
+  left: 92%;
+  z-index: 99999;
+  cursor: pointer;
+}
+
+.div_token #button1::before {
+  content: url("assets/coin.svg");
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.div_token #button2::before {
+  content: url("assets/mahkota2.svg");
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.div_token #button2 {
+  padding: 10px 5px 10px;
+
+  border-radius: 5px;
+  background-color: gold;
+  font-size: 15px;
+  border: none;
+  font-weight: bold;
+
+  color: black;
+}
+
+.div_token h5 {
+  color: white;
+  font-size: 15px;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
 .div_token button:hover {
@@ -355,6 +415,13 @@ input:focus {
   list-style: none;
 }
 
+.wadah_vip1 li::before {
+  content: url("assets/ceklis.svg");
+  position: relative;
+  top: 2px;
+  margin-right: 12px;
+}
+
 .wadah_vip1 button {
   position: relative;
   left: 10%;
@@ -380,4 +447,25 @@ input:focus {
   content: "👑";
   margin-bottom: 10px;
   margin-left: 5px;
+}
+
+.loading {
+  display: none;
+}
+
+.loading.active5 {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  background-color: black;
+  border: 1px solid white;
+}
+
+.loading img {
+  width: 80px;
+  height: 80px;
+  padding: 10px;
 }

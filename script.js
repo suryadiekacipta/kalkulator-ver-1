@@ -3,6 +3,9 @@ let sisa_token = document.querySelector(".token");
 let token = 5;
 let pop_token1 = document.querySelector(".div_token");
 let buton1 = document.getElementById("button1");
+let buton2 = document.getElementById("button2");
+let nanti = document.getElementById("nanti");
+let ttpx = document.getElementById("ttpx");
 
 function bersihkan() {
   if (
@@ -57,7 +60,21 @@ function hasil() {
   }
 }
 
+ttpx.addEventListener("click", () => {
+  pop_token1.classList.remove("active");
+});
+
+nanti.addEventListener("click", () => {
+  pop_token1.classList.remove("active");
+});
+
 buton1.addEventListener("click", () => {
+  pop_choice.classList.add("active3");
+  pop_token1.classList.remove("active");
+});
+
+buton2.addEventListener("click", () => {
+  pop_reg.classList.add("active4");
   pop_token1.classList.remove("active");
 });
 
@@ -103,4 +120,15 @@ reg_vip.addEventListener("click", () => {
 
 ttp.addEventListener("click", () => {
   pop_reg.classList.remove("active4");
+});
+
+let upvip = document.getElementById("upgrade");
+let load = document.querySelector(".loading");
+
+upvip.addEventListener("click", () => {
+  load.classList.add("active5");
+  pop_reg.classList.remove("active4");
+  setTimeout(() => {
+    load.classList.remove("active5");
+  }, 3000);
 });
