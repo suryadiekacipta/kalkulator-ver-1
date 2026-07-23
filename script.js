@@ -131,4 +131,24 @@ upvip.addEventListener("click", () => {
   setTimeout(() => {
     load.classList.remove("active5");
   }, 3000);
+  setTimeout(() => {
+    div_bayr.classList.add("active6");
+  }, 3050);
+});
+
+let div_bayr = document.querySelector(".div_bayar");
+let ttpbyr = document.getElementById("ttpbyr");
+let button_bayar = document.getElementById("bayar");
+let loadbyr = document.querySelector(".loading2");
+
+ttpbyr.addEventListener("click", () => {
+  div_bayr.classList.remove("active6");
+});
+
+button_bayar.addEventListener("click", () => {
+  loadbyr.classList.add("active7");
+  setTimeout(() => {
+    loadbyr.classList.remove("active7");
+    div_bayr.classList.remove("active6");
+  }, 3000);
 });
