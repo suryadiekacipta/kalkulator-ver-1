@@ -150,5 +150,5 @@ button_bayar.addEventListener("click", () => {
   setTimeout(() => {
     loadbyr.classList.remove("active7");
     div_bayr.classList.remove("active6");
-  }, 3000);
+  }, 4000);
 });
