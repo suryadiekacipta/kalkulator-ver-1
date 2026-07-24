@@ -720,6 +720,10 @@ input:focus {
 }
 
 .div_bayar3 {
+  display: none;
+}
+
+.div_bayar3.active8 {
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -727,9 +731,10 @@ input:focus {
   align-items: center;
   top: 50%;
   left: 50%;
+  padding: 7px;
   transform: translate(-50%, -50%);
   position: fixed;
-  border-radius: 10px;
+  border-radius: 15px;
   font-family:
     system-ui,
     -apple-system,
@@ -764,7 +769,7 @@ input:focus {
   content: url("assets/mahkota.svg");
   position: absolute;
   top: 10px;
-  left: 30px;
+  left: 42px;
   width: 50px;
   height: auto;
   margin-right: 7px;
@@ -779,7 +784,7 @@ input:focus {
 .div_bayar3 h5 {
   color: black;
   position: absolute;
-  top: 10px;
+  top: 5px;
   left: 94%;
   font-size: 20px;
   font-weight: 200;
@@ -796,6 +801,7 @@ input:focus {
   padding: 10px;
   margin-bottom: 10px;
   width: 80%;
+  position: relative;
   height: auto;
 }
 
@@ -826,18 +832,18 @@ input:focus {
 }
 
 .child_bayar img[alt="infinity"] {
-  top: 85px;
-  left: 33px;
+  top: 12%;
+  left: 2%;
 }
 
 .child_bayar img[alt="color"] {
-  top: 131.5px;
-  left: 33px;
+  top: 40%;
+  left: 2%;
 }
 
 .child_bayar img[alt="mahkota"] {
-  top: 179px;
-  left: 33px;
+  top: 70%;
+  left: 2%;
 }
 
 .child_bayar2 {
@@ -905,7 +911,99 @@ input:focus {
 .hr3 {
   border: none;
   background-color: rgb(74, 67, 71);
-  height: 1px;
+  height: 0.5px;
   width: 85%;
   margin-bottom: 10px;
+}
+
+.bayar4 {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  height: auto;
+  align-items: left;
+}
+
+.bayar4 h2 {
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.bayar5 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+  gap: 20px;
+}
+
+.bayar5 div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(221, 221, 206);
+  border-radius: 10px;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.bayar5 img {
+  width: 25px;
+  height: auto;
+}
+
+.bayar5 img[alt="qris"] {
+  margin-top: 7px;
+  width: 40px;
+  height: auto;
+}
+
+.bayar5 h3 {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 5px;
+  color: black;
+}
+
+.qh3 {
+  font-size: 15px;
+  margin-top: 7px;
+  font-weight: 600;
+}
+
+.bayar_but {
+  display: flex;
+  flex-direction: column;
+  margin-top: 7px;
+  align-items: center;
+}
+
+.bayar_but button {
+  background: linear-gradient(
+    to right,
+    rgb(196, 137, 26),
+    gold,
+    rgb(196, 137, 26)
+  );
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+#batal {
+  font-size: 15px;
+  font-weight: 400;
+  color: black;
+  cursor: pointer;
+  margin-top: 3px;
+  margin-bottom: 5px;
 }

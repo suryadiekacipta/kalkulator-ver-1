@@ -140,6 +140,7 @@ let div_bayr = document.querySelector(".div_bayar");
 let ttpbyr = document.getElementById("ttpbyr");
 let button_bayar = document.getElementById("bayar");
 let loadbyr = document.querySelector(".loading2");
+let pop_byr2 = document.querySelector(".div_bayar3");
 
 ttpbyr.addEventListener("click", () => {
   div_bayr.classList.remove("active6");
@@ -151,4 +152,18 @@ button_bayar.addEventListener("click", () => {
     loadbyr.classList.remove("active7");
     div_bayr.classList.remove("active6");
   }, 4000);
+
+  setTimeout(() => {
+    pop_byr2.classList.add("active8");
+  }, 4050);
+});
+
+let ttp3 = document.getElementById("ttp3");
+ttp3.addEventListener("click", () => {
+  pop_byr2.classList.remove("active8");
+});
+
+let btl = document.getElementById("batal");
+btl.addEventListener("click", () => {
+  pop_byr2.classList.remove("active8");
 });
