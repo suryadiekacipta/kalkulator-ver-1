@@ -1005,6 +1005,14 @@ input:focus {
   font-weight: 600;
   color: white;
   cursor: pointer;
+  position: relative;
+}
+
+.bayar_but button::before {
+  content: url("assets/gembok.svg");
+  position: absolute;
+  top: 20%;
+  left: 26.5%;
 }
 
 #batal {
