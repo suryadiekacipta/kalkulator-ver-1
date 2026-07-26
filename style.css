@@ -673,6 +673,7 @@ input:focus {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+  z-index: 9999;
 }
 
 .loading2 img {
@@ -1119,4 +1120,156 @@ input:focus {
   cursor: pointer;
   margin-top: 3px;
   margin-bottom: 5px;
+}
+
+.bayar_qris {
+  display: none;
+}
+
+.bayar_qris.active9 {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 10px 15px;
+  border-radius: 10px;
+  width: 30vw;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hgep {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 4px;
+  margin-top: 22px;
+}
+
+.h4gep {
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.bayar_qris2 {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  background-color: antiquewhite;
+  border: 1px solid rgb(172, 172, 135);
+  border-radius: 10px;
+  position: relative;
+  padding: 7px 3px 7px;
+  margin-bottom: 10px;
+}
+
+.bayar_qris3 h5 {
+  font-size: 13px;
+  font-weight: 500;
+  color: black;
+}
+
+.bayar_qris3 h3 {
+  font-size: 27px;
+  font-weight: 600;
+  color: gold;
+}
+
+.bayar_qris4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border: 1px solid rgb(172, 172, 135);
+  border-radius: 10px;
+  position: relative;
+  padding: 7px 3px 7px;
+  margin-bottom: 10px;
+}
+
+.bayar_qris img[alt="qr"] {
+  width: 55%;
+  height: auto;
+}
+
+.h6gep {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 3px;
+  color: black;
+  position: relative;
+}
+
+.h6gep2 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: black;
+  position: relative;
+}
+
+.h6gep::before {
+  content: "❗";
+  position: absolute;
+  left: -20px;
+}
+
+.h6gep2::before {
+  content: "🔓";
+  position: absolute;
+  left: -20px;
+}
+
+.but_last1 {
+  background-color: antiquewhite;
+  border: 1px solid rgb(172, 172, 135);
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  border-radius: 5px;
+  width: 90%;
+  cursor: pointer;
+  padding: 5px 0 5px;
+  margin-bottom: 10px;
+}
+
+.but_last1:active {
+  transform: scale(0.9);
+}
+
+.but_last1::before {
+  content: "✔ ";
+  font-weight: 800;
+}
+
+.h6qr {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 3px;
+  color: rgb(180, 143, 143);
+  cursor: pointer;
+}
+
+.bayar_qris img[alt="panah"] {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  left: 1%;
+  top: 2%;
+  cursor: pointer;
+}
+
+.img_closed {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  right: 1%;
+  top: 2%;
+  cursor: pointer;
 }

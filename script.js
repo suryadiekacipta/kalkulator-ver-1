@@ -223,3 +223,47 @@ bor4.addEventListener("click", () => {
   bor3.classList.remove("met3");
   check3.classList.remove("cek3");
 });
+
+let wktu = document.getElementById("waktu");
+
+let menit = 9;
+let detik = 59;
+
+function waktuya() {
+  setInterval(() => {
+    detik--;
+    if (detik < 10) {
+      detik = "0" + detik;
+    }
+    wktu.textContent = "0" + menit + ":" + detik;
+
+    if (detik <= 0) {
+      detik = 59;
+      menit--;
+    }
+  }, 1000);
+}
+waktuya();
+
+let byrnow = document.getElementById("bayar_now");
+let qrpop = document.querySelector(".bayar_qris");
+let pnh = document.getElementById("panah_ttp");
+let silng = document.getElementById("silang");
+
+byrnow.addEventListener("click", () => {
+  loadbyr.classList.add("active7");
+  pop_byr2.classList.remove("active8");
+  setTimeout(() => {
+    loadbyr.classList.remove("active7");
+    qrpop.classList.add("active9");
+  }, 2000);
+});
+
+pnh.addEventListener("click", () => {
+  qrpop.classList.remove("active9");
+  pop_byr2.classList.add("active8");
+});
+
+silng.addEventListener("click", () => {
+  qrpop.classList.remove("active9");
+});
