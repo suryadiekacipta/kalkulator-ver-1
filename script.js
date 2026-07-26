@@ -167,3 +167,59 @@ let btl = document.getElementById("batal");
 btl.addEventListener("click", () => {
   pop_byr2.classList.remove("active8");
 });
+
+//pop metode pembayaran//
+let bor1 = document.getElementById("qris");
+let bor2 = document.getElementById("dana");
+let bor3 = document.getElementById("gopay");
+let bor4 = document.getElementById("ovo");
+
+//ceklis//
+let check1 = document.querySelector(".checked2");
+let check2 = document.querySelector(".checked3");
+let check3 = document.querySelector(".checked4");
+let check4 = document.querySelector(".checked5");
+
+bor1.addEventListener("click", () => {
+  bor1.classList.add("met1");
+  check1.classList.add("cek1");
+  bor2.classList.remove("met2");
+  check2.classList.remove("cek2");
+  bor3.classList.remove("met3");
+  check3.classList.remove("cek3");
+  bor4.classList.remove("met4");
+  check4.classList.remove("cek4");
+});
+
+bor2.addEventListener("click", () => {
+  bor2.classList.add("met2");
+  check2.classList.add("cek2");
+  bor1.classList.remove("met1");
+  check1.classList.remove("cek1");
+  bor3.classList.remove("met3");
+  check3.classList.remove("cek3");
+  bor4.classList.remove("met4");
+  check4.classList.remove("cek4");
+});
+
+bor3.addEventListener("click", () => {
+  bor3.classList.add("met3");
+  check3.classList.add("cek3");
+  bor1.classList.remove("met1");
+  check1.classList.remove("cek1");
+  bor2.classList.remove("met2");
+  check2.classList.remove("cek2");
+  bor4.classList.remove("met4");
+  check4.classList.remove("cek4");
+});
+
+bor4.addEventListener("click", () => {
+  bor4.classList.add("met4");
+  check4.classList.add("cek4");
+  bor1.classList.remove("met1");
+  check1.classList.remove("cek1");
+  bor2.classList.remove("met2");
+  check2.classList.remove("cek2");
+  bor3.classList.remove("met3");
+  check3.classList.remove("cek3");
+});

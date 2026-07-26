@@ -940,7 +940,59 @@ input:focus {
   gap: 20px;
 }
 
-.bayar5 div {
+.bayar5 div:hover {
+  outline: 1.3px solid gold;
+}
+
+.checked2 {
+  display: none;
+}
+
+.checked2.cek1 {
+  display: block;
+  width: 15px;
+  position: absolute;
+  top: 72%;
+  right: -2px;
+}
+
+.checked3 {
+  display: none;
+}
+
+.checked3.cek2 {
+  display: block;
+  width: 15px;
+  position: absolute;
+  top: 72%;
+  right: -2px;
+}
+
+.checked4 {
+  display: none;
+}
+
+.checked4.cek3 {
+  display: block;
+  width: 15px;
+  position: absolute;
+  top: 72%;
+  right: -2px;
+}
+
+.checked5 {
+  display: none;
+}
+
+.checked5.cek4 {
+  display: block;
+  width: 15px;
+  position: absolute;
+  top: 72%;
+  right: -2px;
+}
+
+#qris {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -951,11 +1003,56 @@ input:focus {
   cursor: pointer;
 }
 
-.bayar5 div:hover {
-  outline: 1.3px solid gold;
+#qris.met1 {
+  outline: 2.3px solid gold;
 }
 
-.bayar5 img {
+#dana {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(221, 221, 206);
+  border-radius: 10px;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+#dana.met2 {
+  outline: 2.3px solid gold;
+}
+
+#gopay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(221, 221, 206);
+  border-radius: 10px;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+#gopay.met3 {
+  outline: 2.3px solid gold;
+}
+
+#ovo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(221, 221, 206);
+  border-radius: 10px;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+#ovo.met4 {
+  outline: 2.3px solid gold;
+}
+
+.bayar5 .metod {
   width: 25px;
   height: auto;
 }
