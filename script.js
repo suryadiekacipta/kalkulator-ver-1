@@ -243,12 +243,12 @@ function waktuya() {
     }
   }, 1000);
 }
-waktuya();
 
 let byrnow = document.getElementById("bayar_now");
 let qrpop = document.querySelector(".bayar_qris");
 let pnh = document.getElementById("panah_ttp");
 let silng = document.getElementById("silang");
+let btlkn = document.querySelector(".h6qr");
 
 byrnow.addEventListener("click", () => {
   loadbyr.classList.add("active7");
@@ -256,6 +256,7 @@ byrnow.addEventListener("click", () => {
   setTimeout(() => {
     loadbyr.classList.remove("active7");
     qrpop.classList.add("active9");
+    waktuya();
   }, 2000);
 });
 
@@ -265,5 +266,9 @@ pnh.addEventListener("click", () => {
 });
 
 silng.addEventListener("click", () => {
+  qrpop.classList.remove("active9");
+});
+
+btlkn.addEventListener("click", () => {
   qrpop.classList.remove("active9");
 });
