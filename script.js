@@ -262,16 +262,34 @@ let qrpop = document.querySelector(".bayar_qris");
 let pnh = document.getElementById("panah_ttp");
 let silng = document.getElementById("silang");
 let btlkn = document.querySelector(".h6qr");
+let tdksdi = document.querySelector(".pop_sedia");
 
 byrnow.addEventListener("click", () => {
-  loadbyr.classList.add("active7");
-  pop_byr2.classList.remove("active8");
   waktuya();
-  setTimeout(() => {
-    loadbyr.classList.remove("active7");
-    qrpop.classList.add("active9");
-    waktuya();
-  }, 2000);
+  if (bor1.classList.contains("met1")) {
+    pop_byr2.classList.remove("active8");
+    loadbyr.classList.add("active7");
+    setTimeout(() => {
+      loadbyr.classList.remove("active7");
+      qrpop.classList.add("active9");
+      waktuya();
+    }, 2000);
+  } else if (bor2.classList.contains("met2")) {
+    tdksdi.classList.add("sdi");
+    setTimeout(() => {
+      tdksdi.classList.remove("sdi");
+    }, 2000);
+  } else if (bor3.classList.contains("met3")) {
+    tdksdi.classList.add("sdi");
+    setTimeout(() => {
+      tdksdi.classList.remove("sdi");
+    }, 2000);
+  } else if (bor4.classList.contains("met4")) {
+    tdksdi.classList.remove("sdi");
+    setTimeout(() => {
+      tdksdi.classList.remove("sdi");
+    }, 2000);
+  }
 });
 
 pnh.addEventListener("click", () => {

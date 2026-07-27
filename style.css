@@ -1273,3 +1273,51 @@ input:focus {
   top: 2%;
   cursor: pointer;
 }
+
+.pop_sedia {
+  display: none;
+}
+
+.pop_sedia.sdi {
+  display: block;
+  background-color: #242424;
+  padding: 3px 4px 3px;
+  border-radius: 10px;
+  width: 23vw;
+  height: auto;
+  position: fixed;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 15px;
+  animation: efek 1.5s ease-out forwards;
+  z-index: 9999;
+  opacity: 0;
+}
+
+@keyframes efek {
+  0% {
+    top: 65%;
+    opacity: 0;
+  }
+  50% {
+    top: 50%;
+    opacity: 0.5;
+  }
+  80% {
+    top: 50%;
+    opacity: 1;
+  }
+  100% {
+    top: 50%;
+    opacity: 0;
+  }
+}
+
+.pop_sedia h2 {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
