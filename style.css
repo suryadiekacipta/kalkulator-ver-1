@@ -118,6 +118,7 @@ input:focus {
   position: absolute;
   top: 20px;
   left: 10px;
+  color: black;
 }
 
 .div_token {
@@ -1319,5 +1320,133 @@ input:focus {
 .pop_sedia h2 {
   color: white;
   font-size: 15px;
+  font-weight: 500;
+}
+
+.div_berhasil {
+  display: none;
+}
+
+.div_berhasil.active10 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+  padding: 10px 15px 10px;
+  border-radius: 10px;
+  width: 23vw;
+  height: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 15px;
+}
+
+.div_berhasil2 {
+  background-image: url("assets/confetti2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  width: 90%;
+  height: 13vh;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.div_berhasil img[alt="checked"] {
+  width: 60px;
+  height: auto;
+}
+
+.h1last1 {
+  color: rgb(180, 167, 93);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.h3last1 {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.div_berhasil3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #161515;
+  border: 1px solid rgb(42, 40, 40);
+  border-radius: 10px;
+  width: 90%;
+  height: auto;
+  padding: 10px 5px 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.div_berhasil3 img {
+  width: 55px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.div_berhasil3 h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.div_berhasil3 h3 {
+  color: white;
+
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.div_berhasil3 h4 {
+  color: white;
+
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.div_berhasil3 h2 {
+  color: white;
+
+  font-size: 19px;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+.div_berhasil button {
+  background-color: gold;
+  width: 95%;
+  color: black;
+  font-weight: 600;
+  padding: 10px 20px 10px;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.div_berhasil button:active {
+  transform: scale(0.9);
+}
+
+.div_berhasil button::after {
+  content: " ➜";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
   font-weight: 500;
 }

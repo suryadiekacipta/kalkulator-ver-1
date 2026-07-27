@@ -311,6 +311,7 @@ btlkn.addEventListener("click", () => {
 });
 
 let sdhbyr = document.querySelector(".but_last1");
+let div_berhasil = document.querySelector(".div_berhasil");
 
 sdhbyr.addEventListener("click", () => {
   qrpop.classList.remove("active9");
@@ -318,4 +319,7 @@ sdhbyr.addEventListener("click", () => {
   setTimeout(() => {
     load.classList.remove("active5");
   }, 1000);
+  setTimeout(() => {
+    div_berhasil.classList.add("active10");
+  }, 1050);
 });
