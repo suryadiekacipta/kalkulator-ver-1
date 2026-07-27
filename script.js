@@ -263,32 +263,37 @@ let pnh = document.getElementById("panah_ttp");
 let silng = document.getElementById("silang");
 let btlkn = document.querySelector(".h6qr");
 let tdksdi = document.querySelector(".pop_sedia");
+let tmrcln;
 
 byrnow.addEventListener("click", () => {
   waktuya();
   if (bor1.classList.contains("met1")) {
     pop_byr2.classList.remove("active8");
     loadbyr.classList.add("active7");
-    setTimeout(() => {
+    clearTimeout(tmrcln);
+    tmrcln = setTimeout(() => {
       loadbyr.classList.remove("active7");
       qrpop.classList.add("active9");
       waktuya();
-    }, 2000);
+    }, 1500);
   } else if (bor2.classList.contains("met2")) {
     tdksdi.classList.add("sdi");
-    setTimeout(() => {
+    clearTimeout(tmrcln);
+    tmrcln = setTimeout(() => {
       tdksdi.classList.remove("sdi");
-    }, 2000);
+    }, 1500);
   } else if (bor3.classList.contains("met3")) {
     tdksdi.classList.add("sdi");
-    setTimeout(() => {
+    clearTimeout(tmrcln);
+    tmrcln = setTimeout(() => {
       tdksdi.classList.remove("sdi");
-    }, 2000);
+    }, 1500);
   } else if (bor4.classList.contains("met4")) {
-    tdksdi.classList.remove("sdi");
-    setTimeout(() => {
+    tdksdi.classList.add("sdi");
+    clearTimeout(tmrcln);
+    tmrcln = setTimeout(() => {
       tdksdi.classList.remove("sdi");
-    }, 2000);
+    }, 1499);
   }
 });
 
@@ -303,4 +308,14 @@ silng.addEventListener("click", () => {
 
 btlkn.addEventListener("click", () => {
   qrpop.classList.remove("active9");
+});
+
+let sdhbyr = document.querySelector(".but_last1");
+
+sdhbyr.addEventListener("click", () => {
+  qrpop.classList.remove("active9");
+  load.classList.add("active5");
+  setTimeout(() => {
+    load.classList.remove("active5");
+  }, 1000);
 });
