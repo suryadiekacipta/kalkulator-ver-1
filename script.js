@@ -226,22 +226,35 @@ bor4.addEventListener("click", () => {
 
 let wktu = document.getElementById("waktu");
 
-let menit = 9;
-let detik = 59;
-
+let tmr;
+let menit = 10;
+let detik = 0;
 function waktuya() {
-  setInterval(() => {
-    detik--;
+  if (!qrpop.classList.contains("active9")) {
+    menit = 10;
+    detik = 3;
     if (detik < 10) {
       detik = "0" + detik;
     }
-    wktu.textContent = "0" + menit + ":" + detik;
+    wktu.textContent = menit + ":" + detik;
+  } else {
+    clearInterval(tmr);
+    tmr = setInterval(() => {
+      detik--;
+      if (detik < 0) {
+        detik = 59;
+        menit--;
+      }
 
-    if (detik <= 0) {
-      detik = 59;
-      menit--;
-    }
-  }, 1000);
+      if (detik < 10) {
+        detik = "0" + detik;
+      }
+      wktu.textContent = menit + ":" + detik;
+      if (menit < 10) {
+        wktu.textContent = "0" + menit + ":" + detik;
+      }
+    }, 1000);
+  }
 }
 
 let byrnow = document.getElementById("bayar_now");
@@ -253,6 +266,7 @@ let btlkn = document.querySelector(".h6qr");
 byrnow.addEventListener("click", () => {
   loadbyr.classList.add("active7");
   pop_byr2.classList.remove("active8");
+  waktuya();
   setTimeout(() => {
     loadbyr.classList.remove("active7");
     qrpop.classList.add("active9");
