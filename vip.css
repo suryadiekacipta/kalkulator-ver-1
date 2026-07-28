@@ -1,0 +1,153 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.section1 {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(15, 13, 24);
+}
+
+.div_dasboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: 1.5px solid rgb(27, 17, 93);
+  height: 50vh;
+  width: 13vw;
+  border-radius: 15px;
+  margin-top: 15px;
+  background-color: black;
+  padding: 10px;
+  transform: translateX(12px);
+}
+
+.div_dasboard1 {
+  display: flex;
+}
+
+.div_dasboard1 img {
+  width: 30px;
+  height: auto;
+}
+
+.div_dasboard1 div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2px;
+  margin-left: 5px;
+}
+
+.div_dasboard1 h1 {
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+}
+
+.hr1 {
+  border: none;
+  height: 0.5px;
+  background-color: rgb(40, 25, 59);
+  width: 97%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.hr2 {
+  border: none;
+  height: 1px;
+  background-color: rgb(40, 25, 59);
+  box-shadow: 5px 5px 5px rgb(54, 33, 89);
+  width: 97%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.div_dasboard1 h1::after {
+  content: "Aktif";
+  background-color: green;
+  color: white;
+  padding: 0px 5px 0px;
+  font-size: 10px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.button1 {
+  background: linear-gradient(to bottom, rgb(36, 32, 9) 90%, gold);
+  border: 1px solid gold;
+  border-radius: 8px;
+  color: gold;
+  font-weight: 500px;
+  padding: 7px 10px 7px;
+  margin-top: 10px;
+  cursor: pointer;
+  position: relative;
+  width: 90%;
+}
+
+.button1 img {
+  width: 20px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+}
+
+.div_dasboard2 {
+  width: 90%;
+}
+
+.div_dasboard2 h2 {
+  color: gold;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.div_dasboard3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(15, 13, 24);
+  width: 100%;
+  border: 1px solid orange;
+  border-radius: 10px;
+}
+
+.div_dasboard3 h3 {
+  color: white;
+  font-size: 13px;
+  margin-top: 7px;
+  margin-bottom: 5px;
+}
+
+.div_dasboard3 h4 {
+  color: white;
+  font-size: 12px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.div_dasboard3 img {
+  width: 25px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.div_dasboard4 {
+  display: flex;
+  flex-direction: column;
+}
