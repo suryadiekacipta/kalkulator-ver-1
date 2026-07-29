@@ -285,7 +285,8 @@ a {
   height: auto;
   gap: 15px;
   border: 1.5px solid gold;
-  background-color: rgb(38, 25, 0);
+  box-shadow: 0 0 5px gold;
+  background-color: rgb(15, 27, 2);
   border-radius: 10px;
   padding: 7px;
 }
