@@ -19,6 +19,10 @@ a {
   background-color: rgb(15, 13, 24);
 }
 
+.waktu_aktif {
+  color: white;
+}
+
 .div_dasboard {
   display: flex;
   flex-direction: column;
