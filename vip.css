@@ -394,6 +394,7 @@ a {
   border-radius: 10px;
   border: 1.5px solid gold;
   box-shadow: 0 0 5px gold;
+  cursor: pointer;
 }
 .div_lagu h4 {
   color: gold;
