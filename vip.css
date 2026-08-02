@@ -335,20 +335,6 @@ a {
   font-weight: 500;
 }
 
-.his1 {
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-  border-radius: 15px;
-  outline: 1.5px solid rgb(27, 17, 93);
-  position: relative;
-  height: 80vh;
-  width: 20vw;
-  transform: translateX(50px);
-  margin-top: 15px;
-  padding: 10px;
-}
-
 .bungkus1 {
   width: 51.5%;
   display: flex;
@@ -409,6 +395,22 @@ a {
   margin-bottom: 5px;
 }
 
+.div_lagu #kaset1.kaseton {
+  width: 55px;
+  height: auto;
+  margin-bottom: 5px;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .cal7 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -448,4 +450,126 @@ a {
 .cal7 button:nth-child(4n) {
   background-color: gold;
   color: black;
+}
+
+.his1 {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  border-radius: 15px;
+  outline: 1.5px solid rgb(27, 17, 93);
+  position: relative;
+  height: 80vh;
+  width: 20vw;
+  transform: translateX(50px);
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.his1 .div_judul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.his1 .div_judul img[alt="history"] {
+  width: 15px;
+  height: auto;
+  position: absolute;
+  left: -40%;
+}
+
+.his1 .div_judul img[alt="trash"] {
+  width: 15px;
+  height: auto;
+  position: absolute;
+  left: -30%;
+}
+
+.his1 h1 {
+  color: white;
+  font-size: 14.5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  position: relative;
+  left: 8%;
+}
+
+.his1 h3 {
+  color: white;
+  font-size: 13px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: 400;
+  position: relative;
+}
+
+.div_history {
+  height: 90%;
+  width: 100%;
+  overflow-y: auto;
+  border: 1px solid rgb(15, 26, 83);
+  border-radius: 5px;
+}
+
+.div_history1 {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(12, 9, 35);
+  border: 1px solid rgb(15, 26, 83);
+  border-radius: 5px;
+  position: relative;
+  height: 14%;
+  width: 99.6%;
+}
+
+.div1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.div1 h4 {
+  color: white;
+  font-size: 13px;
+  top: 18%;
+  left: 20%;
+  font-weight: 400;
+  position: relative;
+}
+
+.div1 h5 {
+  color: gold;
+  font-size: 13px;
+  top: 22%;
+  left: 20%;
+  font-weight: 400;
+  position: relative;
+}
+
+.div2 {
+  display: flex;
+  width: 20%;
+  position: relative;
+}
+
+.div2 h4 {
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 75%;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.div2 img {
+  width: 27px;
+  height: auto;
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }

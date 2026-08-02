@@ -41,15 +41,19 @@ function hapus() {
   input1.value = input1.value.slice(0, -1);
 }
 
+let haasil1;
+let hasil_bulat;
 function hasil() {
   try {
-    let hasil1 = eval(input1.value);
-    input1.value = hasil1;
+    hasil1 = eval(input1.value);
+    hasil_bulat = input1.value = Math.floor(hasil1);
   } catch (error) {
     console.log("error");
     input1.value = "Error!";
   }
 }
+
+function render_history() {}
 
 function cek() {
   if (input1.value == "undefined" || input1.value == "Error!") {
@@ -59,11 +63,22 @@ function cek() {
 
 let lagu1 = document.getElementById("lagu1");
 let audio1 = document.getElementById("audio1");
+let kaset1 = document.getElementById("kaset1");
+let kasetoff1;
 
 lagu1.addEventListener("click", () => {
   audio1.currentTime = 0;
+  clearTimeout(kasetoff1);
   lirik_dunia_yg_nanti();
   audio1.play();
+  if (!audio1.paused) {
+    kaset1.classList.add("kaseton");
+  }
+  kasetoff1 = setTimeout(() => {
+    if (audio1.paused) {
+      kaset1.classList.remove("kaseton");
+    }
+  }, 200000);
 });
 
 let clear_time1,
