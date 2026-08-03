@@ -31,18 +31,23 @@ let input1 = document.getElementById("input1");
 function hitung(value) {
   cek();
   input1.value += value;
+  simpan_nilai = input1.value;
 }
+let simpan_nilai;
 
 function hapus_semua() {
   input1.value = "";
+  simpan_nilai = input1.value;
 }
 
 function hapus() {
   input1.value = input1.value.slice(0, -1);
+  simpan_nilai = input1.value;
 }
 
 let haasil1;
 let hasil_bulat;
+
 function hasil() {
   try {
     hasil1 = eval(input1.value);
@@ -51,10 +56,50 @@ function hasil() {
     console.log("error");
     input1.value = "Error!";
   }
+  render_history();
 }
 
-function render_history() {}
+let data_ary = [];
 
+function render_history() {
+  let div_history = document.querySelector(".div_history");
+  let jam = new Date();
+  let jam_sekarang = jam.getHours();
+  let menit_sekarang = jam.getMinutes();
+
+  data_ary.push({ nilai: simpan_nilai, hasil: hasil_bulat });
+  div_history.innerHTML += `
+  <div class="div_history1">
+     <div class="div1">
+        <h4>${simpan_nilai}</h4>
+        <h5>= ${hasil_bulat}</h5>
+      </div>
+
+  <div class="div2">
+    <h4>${jam_sekarang}:${menit_sekarang}</h4>
+    <img src="assets/copy.png" class="copy" data-id="${data_ary.length - 1}"/>
+   </div>
+    </div>
+  `;
+
+  let copy1 = document.querySelectorAll(".copy");
+  copy1.forEach((copy) => {
+    copy.addEventListener("click", () => {
+      let data_id1 = copy.dataset.id;
+      let salin_klik = document.querySelector(".pop1");
+      let nilai_copy =
+        data_ary[copy.dataset.id].nilai +
+        " = " +
+        data_ary[copy.dataset.id].hasil;
+      navigator.clipboard.writeText(nilai_copy);
+      salin_klik.classList.add("pop1tif");
+
+      setTimeout(() => {
+        salin_klik.classList.remove("pop1tif");
+      }, 1550);
+    });
+  });
+}
 function cek() {
   if (input1.value == "undefined" || input1.value == "Error!") {
     input1.value = "";
