@@ -60,9 +60,8 @@ function hasil() {
 }
 
 let data_ary = [];
-
+let div_history = document.querySelector(".div_history");
 function render_history() {
-  let div_history = document.querySelector(".div_history");
   let jam = new Date();
   let jam_sekarang = jam.getHours();
   let menit_sekarang = jam.getMinutes();
@@ -88,9 +87,7 @@ function render_history() {
       let data_id1 = copy.dataset.id;
       let salin_klik = document.querySelector(".pop1");
       let nilai_copy =
-        data_ary[copy.dataset.id].nilai +
-        " = " +
-        data_ary[copy.dataset.id].hasil;
+        data_ary[data_id1].nilai + " = " + data_ary[data_id1].hasil;
       navigator.clipboard.writeText(nilai_copy);
       salin_klik.classList.add("pop1tif");
 
@@ -105,6 +102,24 @@ function cek() {
     input1.value = "";
   }
 }
+
+let trash = document.getElementById("trash");
+let hapusYes = document.getElementById("hapus1");
+let hapusNo = document.getElementById("hapus2");
+let pop2 = document.querySelector(".pop2");
+trash.addEventListener("click", () => {
+  pop2.classList.add("pop2tif");
+});
+
+hapusYes.addEventListener("click", () => {
+  div_history.innerHTML = "";
+  data_ary = [];
+  pop2.classList.remove("pop2tif");
+});
+
+hapusNo.addEventListener("click", () => {
+  pop2.classList.remove("pop2tif");
+});
 
 let lagu1 = document.getElementById("lagu1");
 let audio1 = document.getElementById("audio1");

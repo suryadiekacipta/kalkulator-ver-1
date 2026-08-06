@@ -484,6 +484,11 @@ a {
   height: auto;
   position: absolute;
   left: -30%;
+  cursor: pointer;
+}
+
+#trash {
+  cursor: pointer;
 }
 
 .his1 h1 {
@@ -509,6 +514,7 @@ a {
   height: 90%;
   width: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
   border: 1px solid rgb(15, 26, 83);
   border-radius: 5px;
 }
@@ -611,4 +617,66 @@ a {
   font-size: 15px;
   font-weight: 500;
   color: white;
+}
+
+.pop2 {
+  display: none;
+}
+
+.pop2.pop2tif {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 270px;
+  height: 110px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  border-radius: 10px;
+}
+
+.pop2 h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.button_pop2 {
+  display: flex;
+  justify-content: space-around;
+  width: 85%;
+}
+
+#hapus1 {
+  border: none;
+  border-radius: 7px;
+  background-color: gold;
+  color: black;
+  font-size: 15px;
+  padding: 7px 20px 7px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#hapus1:active {
+  transform: scale(0.9);
+}
+
+#hapus2 {
+  border: none;
+  border-radius: 7px;
+  background-color: gold;
+  color: black;
+  font-size: 15px;
+  padding: 7px 20px 7px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#hapus2:active {
+  transform: scale(0.9);
 }
